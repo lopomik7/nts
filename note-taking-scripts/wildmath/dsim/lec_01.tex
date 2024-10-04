@@ -1,0 +1,135 @@
+\lecture{1}{Tue 28 May 2024 23:25}{What exactly is a set?}
+
+\vspace{1em}  % Add some vertical space between definitions
+
+\begin{definition}[Set]
+\begin{quote}
+A number of things of the same kind that belong or are used together. [Merriam-Webster]
+
+A group or collection of things that belong together or resemble one another or are usually found together [Oxford]
+\end{quote}
+\end{definition}
+
+\vspace{1em}  % Add some vertical space between definitions
+
+\begin{definition}[Thesaurus Set]
+\begin{quote}
+Collection, group, arrangement, clump, multitude, batch, cluster, formation, body, host, bunch, lineup, bundle, lot, display, menagerie, throng, assortment, compendium, aggregate, ensemble, assemblage, class, clique, progression, \dots
+\end{quote}
+\end{definition}
+
+
+\vspace{1em}  % Add some vertical space between definitions
+
+Whatever a `set' turns out to be, we would like the following examples.
+
+\eg{\( A = \{1,2,3\} = \{2,1,3\} = \{3,1,2\}\)
+
+\( B =\{47\} \)
+
+\( C = \{\{5, 11\}, \{1\}, 6\} \)
+
+We want a `set' to be \underline{unordered}, and to contain only \underline{one} of a given element.
+
+\eg{\( D = \{1, 3, 1, 2\} \longleftarrow \) Not a set!}
+
+We also want the objects in the `set' to be well-defined `mathematical objects'. So closely related to the question of what is a `set' is the question: What is a `mathematical object'? Are any of the following sets?
+
+\eg{\( F = \{\text{Fred}\} \),  \( G = \left\{\frac{1}{2}+\frac{2}{3}\right\} \),  \( H = \left\{ {}^2 3 \right\} \). }
+
+Are we going to consider `sets' with an `infinite number' of elements?
+
+\eg \( X = \left\{\frac{1}{1}, \frac{1}{2}, \frac{1}{3}, \frac{1}{4}, \dots\right\} \) or \( Y = \{ \text{all possible equations} \} \)
+
+How to tell if two sets \( A \) and \( B \) are equal?
+
+\eg \( A = \{3,17,18,21,5,4,1,5,R,13,11,8,9,51,14,28\} \)
+
+\( B = \{51,4,R,8,3,1,21,R,9,41,17,47,28,13\} \)
+
+Is \( A = B \)? \qed
+
+Implicit in the above question: how can we tell if mathematical objects are the same?
+
+\eg \( C = \{3 \times 7, \text{ the smallest prime } > 18, 17 = 13\} \)
+
+\eg \( D = \{19, 13 = 17, 22 - 1\} \)
+
+Is \( C = D \)?
+
+And what about `sets' whose `elements' cannot be specified but only `described'?
+\[
+E = \{ \text{the smallest prime} > 20^{20^{20^{20^{20}}}}, \text{ the smallest equation written down}, \text{the One Piece wa} \}
+\]
+
+Is \( E \) a legitimate `set'? \qed
+
+\newpage
+How about \underline{self-referential sets}?
+
+\eg \( F = \{F\} \) i.e. \( F=\{F, \{F\} \} \) i.e. \( F= \{F, \{F, \{F\} \} \} \) and taking the limit \( F = \{F, \{F, \{F, \{F, \{F, \dots \} \} \} \} \} \)
+
+\vspace{1em}  % Add some vertical space between definitions
+Does this make sense? \qed
+
+Or empty sets: Should we allow a set with 0 elements? i.e. \( G = \{\} \)
+
+\vspace{1em}  % Add some vertical space between definitions
+
+\underline{Sets with negative number of elements}?
+
+\( \{1,2\} \cup \{3\} = \{1,2,3\} \) ??
+
+\( \{1,2\} \cup \{\textcolor{red}{2}\} \) A negative number of 2's?
+
+\( \{ \text{Fred} \} \cup \{\textcolor{red}{\text{Fred}}\} \) A negative Fred?
+
+\vspace{1em}  % Add some vertical space between definitions
+\underline{Choice versus algorithmic construction of sets} [L. Wittgenstein]
+
+\vspace{1em}  % Add some vertical space between definitions
+
+\underline{Choice}:
+\( C = \left\{3, \frac{1}{34}, \text{electric fan}, T, \text{car}, 1337, \ldots \right\} \)
+
+\vspace{1em}  % Add some vertical space between definitions
+
+\underline{Algorithmic}: 1) Insert 1
+
+2) Insert what you've built so far, and repeat.
+
+i.e. \( A = \{1, \{1\}, \{1,\{1\}\}, \{1,\{1,\{1,\{1\}\}\}\}, \ldots \} \)
+
+\vspace{1em}  % Add some vertical space between definitions
+
+Whenever you are dealing with infinite processes the distinction between choice and algorithm is never far away.
+
+How about \underline{choice/algorithm} question applied to nesting rather than listing issues?
+
+\eg \( R = \{a, b\} \) where \( a = \{c, d\} \), \( b = \{ e, f\} \), \( c = \{ x, y , z\} \), \( d = \{f\} \)
+
+\( e = \{1, 2, r\} \), \( f = \{k, l, m\} \), \ldots ~\qed
+
+What about sets given by conditions which we can't (easily check)?
+
+\eg \( P = \{ n \mid n \text{ is an odd perfect number} \} \)
+
+Is \( P \) a valid set? \qed
+
+\begin{figure}[ht]
+    \centering
+    \incfig[1]{george-cantor}
+    \caption{Georg Cantor 1845-1918}
+    \label{fig:george-cantor}
+\end{figure}
+
+\vspace{1em}  % Add some vertical space between definitions
+
+\underline{Georg Cantor} [1870's] \begin{quote} "Eine Menge, ist
+die Zusommenfasung bestimmter, wohlunterschedener Objekte unserer Anschaung
+oder unseres Dekens-welche \underline{Elemente} der Menge genannt werden."
+\end{quote}
+
+Translation: "A set is a gathering together into a whole of definite, distinct
+objects of our perception or of our thought-which are called
+\underline{elements} of the set."

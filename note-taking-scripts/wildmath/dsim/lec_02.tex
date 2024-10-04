@@ -1,0 +1,165 @@
+\lecture{2}{Wed 29 May 2024 21:18}{Sets and other data structures in mathematics}
+
+Set theory is an attempt to \underline{organize mathematical objects}. This is parallel to attempts to organize \underline{physical} or \underline{real-life objects}. There are obvious connections to computer science.
+
+\begin{definition}[Generic set]
+    A set is unordered and without repetitions.
+\end{definition}
+
+\vspace{1em}  % Add some vertical space between definitions
+
+There are four types of data structures:
+
+\[
+\begin{array}{|c|c|c|}
+    \hline
+    & \textbf{Unordered} & \textbf{Ordered} \\
+    \hline
+    \textbf{Without Repetition} & \text{set } \{1\, 2\, 3\} & \text{ordered set } \{1, 2, 3\} \\
+    \hline
+    \textbf{With Repetition} & \text{multiset } [1\, 1\, 4\, 2] & \text{list } [1, 1, 4, 2] \\
+    \hline
+\end{array}
+\]
+
+Notice the different notation where no commas suggest no order and braces suggest repetitions.
+
+\[
+    \fbox{
+    \parbox{0.5\textwidth}{
+        \begin{tabular}{@{}l@{}}
+        \textbf{\{ \} -- Without repetitions} \\
+        \textbf{[ ] -- With repetitions} \\
+        \textbf{Space delimiter -- Unordered} \\
+        \textbf{Comma delimiter -- Ordered}
+        \end{tabular}
+    }
+}
+
+\]
+
+\[
+\begin{aligned}
+A &= \underset{\text{set}}{\{1\:2\:3\}} \\
+H &= \underset{\text{oset}}{\{2, 7\}} \\
+D &= \underset{\text{mset}}{[1\:5\:5\:4]} \\
+F &= \underset{\text{list}}{[7, 5, 4]}
+\end{aligned}
+\]
+
+\vspace{1em}  % Add some vertical space between definitions
+
+\underline{Data structures in real life}
+
+\begin{description}
+    \item[\textbf{People in a company}:] set
+    \item[\textbf{Names in a company}:] multiset (mset)
+    \item[\textbf{Words in a dictionary}:] ordered set (oset)
+    \item[\textbf{Letters in a word}:] list
+    \item[\textbf{Webpages}:] set
+    \item[\textbf{Images found on the internet}:] multiset (mset)
+    \item[\textbf{Primes from 2 to 19}:] ordered set (oset)
+    \item[\textbf{Bus numbers that arrive at a stop}:] list
+\end{description}
+
+While the kinds of elements in real life that appear in data structures are highly varied, we will start out with very focused examples.
+
+\vspace{1em}
+
+\[
+\begin{aligned}
+\textbf{Nat} &: \quad 1, 2, 3, 4, \ldots \\
+\textbf{Nat}^{+} &: \quad 0, 1, 2, 3, \ldots
+\end{aligned}
+\]
+For a precise theory, we are going to agree that the Hindu-Arabic form of a number
+\( n \in Nat \) or \( k \in Nat^{+} \) is the only one allowed!
+
+\eg{    \( n = 13 \textcolor{green}{\checkmark} \)
+
+    \( n = 12+1 \textcolor{red}{\times}\)
+
+    \( n = 1+1+1+1+1+1+4 \textcolor{red}{\times} \)
+
+\( n = \text{smallest prime > 12} \textcolor{red}{\times} \)
+
+    \( n = \text{Mary's lucky number}\textcolor{red}{\times} \)
+}
+\eg{
+    \( k = 57109\textcolor{green}{\checkmark} \)\), \( k = 57.109\textcolor{red}{\times} \), \( k = 57.109 \cdot 0\textcolor{red}{\times} \)
+}
+
+Or first (cooked up) datastructure is not going to be a set.
+
+\begin{definition}
+    \underline{k-list}: For \( n,k \in \text{Nat} \) we define a k-list from n to be an
+    expression of the form \( L = [m_{1},m_{2},\dots, m_{k}] \)
+where each \( m_{i} \in \text{Nat} \) and \( 1 \le m_{i} \le n \).
+
+\end{definition}
+
+\vspace{1em}
+This defines a new type object: \[
+    \underline{List(n,k)}
+.\]
+
+\vspace{1em}
+\eg{
+    i) \( [3,2,4] \in \text{List}(4,3)\) \: ii) \( [13] \in \text{List}(15,1) \)
+
+    iii) \( [1,5,5,1] \in \text{List}(5,4) \) \: iiii) \( [2,2,2,2] \in \text{List}(2,4) \)
+}
+
+\vspace{1em}
+The objects (natural numbers) \( m_{1},\dots,m_{k} \) in the k-list L=\( [m_{1},m_{2},\dots,m_{k}] \) are called
+the elements of L. They are considred as distinct elements, even if as numbers they are the same/equal.
+
+\eg{ The 4-list  \( L=[3,1,3,2] \) has four elements, namely 3,1,3 and 2.
+}
+\vspace{1em}
+The size of the k-list \( L = [m_{1},m_{2},\dots,m_{k}] \) is
+\[
+    \lvert L \rvert = k
+.\]
+
+The list the most fundamental data structure. An ordered set is a variant, where the elements
+are required to be distinct.
+
+\begin{definition}[k-ordered set]
+    For \( n,k \in Nat \), a k-ordered set from n is an expression of the form
+    \begin{displaymath}
+        O = {m_{1},m_{2},\dots, m_{k}}
+    \end{displaymath}
+
+    where each \( m \in  \text{Nat} \), \( 1\le m_{i}\le n  \), and the \( m_{i} \) are
+    all distinct, ie. \( m_{i} \neq m{j} \) if \( i \neq j \).
+
+\end{definition}
+
+\eg{
+    \( \text{O}  = \{1,3,5\} \in \text{Oset}(5,3) \) with \( \abs{O} = \text{k} = 3 \).
+}
+
+Another variant of a list is a multiset, where order is no longer important.
+
+\begin{definition}[k-multiset]
+    For \( n,k \in \text{Nat} \), a k-multiset from n is an expression of the form
+    \[
+        M = [m_{1},m_{2}, \dots, m_{n}]
+    \]
+    where each \( m_{i} \in \text{Nat} \), \( 1 \le m_{i} \le n \), and the order
+    of the elements \( m_{i} \) is unimportant.
+\end{definition}
+
+\eg{\( M = [1\:3\:3\:1\:15] = [15\:1\:3\:1\:3] \in \text{Mset}(15,5)\:\text{with}\:\abs{M}=5\)}.
+
+\begin{definition}[k-set]
+    For \( n,k \in \text{Nat}\) we define a k-set from n to be an expression of the
+    form \[
+        S = \{m_{1},m_{2},\dots, m_{k}\}
+    \]
+    where each \( m_{1} \in \text{Nat} \), \( 1 \le m \le n \), and the \( m_{i} \) are
+    all distinct, and their order is unimportant.
+\end{definition}
+
+\eg{\( S = \{13\:7\:2\} = \{2\:7\:13\} \in  \{13\:3\} \) with \( \abs{S} = 3 \)}.

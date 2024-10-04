@@ -1,0 +1,104 @@
+\documentclass{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{enumitem}
+\usepackage{multicol}
+
+\title{\LaTeX-Inkscape Cheatsheet}
+\author{lopo}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{multicols}{2} % Two columns
+\section*{Inkscape Shortcuts}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Drawing Tools:}
+    \begin{itemize}[label={}]
+        \item \texttt{r} // Rectangle
+        \item \texttt{e} // Ellipse
+        \item \texttt{w} // Pencil
+        \item \texttt{f} // Bezier
+    \end{itemize}
+
+    \item \textbf{General Shortcuts:}
+    \begin{itemize}[label={}]
+        \item \texttt{z} // Undo
+        \item \texttt{x} // Toggle snapping
+        \item \texttt{§} // Shortcut manager
+        \item \texttt{shift z} // Delete
+        \item \texttt{shift s / shift a} // Save custom style/object
+        \item \texttt{s / a} // Apply style/object
+        \item \texttt{ctrl - / ctrl +} // Subtract from shape
+    \end{itemize}
+\end{itemize}
+
+\columnbreak
+
+\section*{Stroke Diagram: Solid|Dotted|Dashed}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Normal Stroke:}
+    \begin{itemize}[label={}]
+        \item \texttt{s-d-e}
+        \item \texttt{bs-bd-be} // black
+        \item \texttt{fs-fd-fe} // gray
+        \item \texttt{ws-wd-we} // white
+        \item \texttt{as-ad-ae} // arrow (mix with color if needed)
+        \item \texttt{xs-xd-xe} // arrows (mix with color if needed)
+    \end{itemize}
+
+    \item \textbf{Thick Stroke:}
+    \begin{itemize}[label={}]
+        \item \texttt{g-gd-ge}
+        \item \texttt{bg-bgd-bge} // black
+        \item \texttt{fg-fgd-fge} // gray
+        \item \texttt{wg-wgd-wge} // white
+        \item \texttt{ag-agd-age} // arrow (mix with color if needed)
+        \item \texttt{xg-xgd-xge} // arrows (mix with color if needed)
+    \end{itemize}
+
+    \item \textbf{Very Thick Stroke:}
+    \begin{itemize}[label={}]
+        \item \texttt{h-d-e}
+        \item \texttt{bh-bhd-bhe} // black
+        \item \texttt{fh-fhd-fhe} // gray
+        \item \texttt{wh-whd-whe} // white
+        \item \texttt{ah-ahd-ahe} // arrow (mix with color if needed)
+        \item \texttt{xh-xhd-xhe} // arrows (mix with color if needed)
+    \end{itemize}
+\end{itemize}
+
+\end{multicols}
+
+\vspace{0.5cm}
+
+\section*{PHD-Lecture-Notes merged with sxhkd: ctrl + alt}
+\begin{multicols}{2} % Two columns
+\begin{itemize}[leftmargin=*]
+    \item \textbf{PHD Notes:}
+    \begin{itemize}[label={}]
+        \item \texttt{p} // Find PDFs in paper dir
+        \item \texttt{r} // Open lf in today's notes
+        \item \texttt{n} // Open today's notes in vim
+        \item \texttt{1} // Open master.pdf of notes
+        \item \texttt{x} // Open xournal notes with today's time
+        \item \texttt{f} // Add PDF link
+    \end{itemize}
+
+    \item \textbf{Lecture Notes:}
+    \begin{itemize}[label={}]
+        \item \texttt{2} // Symlink to current\_course
+        \item \texttt{c} // Open master.pdf of lectures
+        \item \texttt{t} // Open lf in current\_course
+        \item \texttt{3} // CD to current\_course
+        \item \texttt{m} // Open master.tex of lectures in vim
+        \item \texttt{v} // Include lecture notes to master.tex
+        \item \texttt{4} // Edit figures in current\_course
+        \item \texttt{l} // List lecture notes
+        \item \texttt{ctrl n} // Create lecture notes
+        \item \texttt{7} // Initiate courses
+    \end{itemize}
+\end{itemize}
+\end{multicols}
+
+\end{document}

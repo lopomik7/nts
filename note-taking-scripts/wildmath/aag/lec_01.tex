@@ -1,0 +1,44 @@
+\lecture{1}{Wed 29 May 2024 19:54}{What is a number?}
+
+The most important mathematical object are the natural numbers. These have obviously existed for hundreds of thousand years. Without getting too sophisticated, the starting point of mathematics is an empty page.
+
+\begin{figure}[ht]
+    \centering
+    \incfig[0.3]{nothing}
+    \caption{A Box Of Nothing}
+    \label{fig:nothing}
+\end{figure}
+
+Now we introduce something:
+| represents a single entity we call \underline{one}. The next idea is adding | to itself: || which we call \underline{two}, ||| \underline{three}, |||| \underline{four}, ||||| \underline{five}, and so on.
+
+\begin{definition}
+    A \underline{natural number} is a string of ones.
+\end{definition}
+
+The natural numbers form a sequence, they are naturally ordered. Every natural number can be associated by the next one called the successor:
+\[
+    s(1) = ||, \quad s(2) = |||, \quad s(3) = ||||
+\]
+
+Another important concept is the notion of relative size, which one is bigger/smaller?
+
+\[
+\begin{array}{c c c c c}
+| & | & | & | & | \\
+. & . & . & . & . \\
+. & . & . & . & . \\
+. & . & . & . & . \\
+| & | & | & | &
+\end{array}
+\]
+
+Compare the two natural numbers by pairing the ones in each sequence in both strings. If there are some leftovers, then that string of ones is the larger number.
+
+\begin{definition}
+    Notion of equality: represent a number \( n \) or \( m \) where \( n = m \iff \) every ones in \( n \) can be paired up with ones in \( m \).
+\end{definition}
+
+\begin{definition}
+    Notion of inequality: represent a number \( n \) or \( m \) where \( n < m \iff \) \( n \) comes before \( m \) in the sequence of natural numbers.
+\end{definition}

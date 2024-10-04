@@ -1,0 +1,9 @@
+# ~/.config/sxhkd/sxhkdrc
+
+# Add shortcuts for keys 1-7
+control + alt + {1-7}
+    bash ~/Documents/note-taking-scripts/phd/scripts/shortcut.sh {1-7}
+
+# Add shortcuts for keys a-z
+control + alt + {a-z}
+    bash ~/Documents/note-taking-scripts/phd/scripts/shortcut.sh {a-z}
